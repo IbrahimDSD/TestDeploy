@@ -354,7 +354,4 @@ def main():
             st.warning("No transactions found for the selected date range.")
 
 if __name__ == "__main__":
-    if "authenticated" not in st.session_state or not st.session_state["authenticated"]:
-        login()
-    else:
         main()
