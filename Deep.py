@@ -8,21 +8,6 @@ from sqlalchemy.exc import SQLAlchemyError
 from urllib.parse import quote_plus
 
 # ----------------- User Authentication -----------------
-def login():
-    """Display the login page and check credentials."""
-    st.title("Login")
-    username = st.text_input("Username")
-    password = st.text_input("Password", type="password")
-    if st.button("Login"):
-        # Modify credentials as needed
-        if username == "admin" and password == "password123":
-            st.session_state["authenticated"] = True
-            try:
-                st.experimental_rerun()
-            except AttributeError:
-                st.info("Login successful! Please refresh the page manually.")
-        else:
-            st.error("Invalid username or password.")
 
 # ----------------- Database Configuration -----------------
 def create_db_engine():
